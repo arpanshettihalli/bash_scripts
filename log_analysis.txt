@@ -1,0 +1,11 @@
+Log files modified in the last 24 hours:./system.log
+./application.log
+Analyzing log file: ./system.log
+Found 13 occurrences of 'ERROR' in ./system.log
+Found 2 occurrences of 'FATAL' in ./system.log
+Found 5 occurrences of 'CRITICAL' in ./system.log
+Analyzing log file: ./application.log
+Found 6 occurrences of 'ERROR' in ./application.log
+Found 2 occurrences of 'FATAL' in ./application.log
+Found 2 occurrences of 'CRITICAL' in ./application.log
+ERROR FATAL CRITICAL
