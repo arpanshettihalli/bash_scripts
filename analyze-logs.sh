@@ -7,6 +7,9 @@ for log_file in $log_files; do
     echo "Analyzing log file: $log_file" >> log_analysis.txt
     for pattern in ${error_patterns[@]}; do
         count=$(grep -c $pattern $log_file)
+        if [ $count -gt 10 ]; then
+            echo "alert: Found $count occurrences of '$pattern' in $log_file"
+        fi
         echo "Found $count occurrences of '$pattern' in $log_file" >> log_analysis.txt
     done
 done
