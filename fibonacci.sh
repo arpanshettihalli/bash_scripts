@@ -1,15 +1,12 @@
 #!/bin/bash
 echo -e "enter user input:"
 read number
-a=0
-b=1
-c=0
-echo $a
-echo $b
-for ((i=0; i<number-2; i++));do
-c=$((a+b))
-echo "$c"
-b=$c
-a=$b
+for ((i=2; i<=number/2; i++));do
+if [ $((number%i)) -eq 0 ];then
+echo -e "the number is not prime"
+break
+fi
 done
-
+if [ $i -gt $((number/2)) ];then
+echo -e "the number is prime"
+fi
